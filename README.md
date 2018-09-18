@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/fga-eps-mds/2016.2-Observatorio-de-Residuos-Backend.svg?branch=sprint2)](https://travis-ci.org/fga-eps-mds/2016.2-Observatorio-de-Residuos-Backend)
 
-[![Code Climate](https://codeclimate.com/github/ObservatorioDeResiduos-GCES-2018/2016.2-Observatorio-de-Residuos-Frontend/badges/gpa.svg)](https://codeclimate.com/github/ObservatorioDeResiduos-GCES-2018/2016.2-Observatorio-de-Residuos-Frontend)
+[![Code Climate](https://codeclimate.com/github/ObservatorioDeResiduos-GCES-2018/2016.2-Observatorio-de-Residuos-Backend/badges/gpa.svg)](https://codeclimate.com/github/ObservatorioDeResiduos-GCES-2018/2016.2-Observatorio-de-Residuos-Backend)
 
-[![Test Coverage](https://codeclimate.com/github/ObservatorioDeResiduos-GCES-2018/2016.2-Observatorio-de-Residuos-Frontend/badges/coverage.svg)](https://codeclimate.com/github/ObservatorioDeResiduos-GCES-2018/2016.2-Observatorio-de-Residuos-Frontend/coverage)
+[![Test Coverage](https://codeclimate.com/github/ObservatorioDeResiduos-GCES-2018/2016.2-Observatorio-de-Residuos-Backend/badges/coverage.svg)](https://codeclimate.com/github/ObservatorioDeResiduos-GCES-2018/2016.2-Observatorio-de-Residuos-Backend/coverage)
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
