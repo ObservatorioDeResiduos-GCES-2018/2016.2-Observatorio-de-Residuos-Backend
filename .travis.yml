@@ -1,7 +1,10 @@
+env:
+   global:
+     - CC_TEST_REPORTER_ID=ed2c65558c610884e54266457bbe87c43185b822d58587645795050091e4dd8c
 language: ruby
 
 rvm:
-  - "2.3.0"
+  - "2.3.1"
 
 services:
   - mysql
@@ -10,22 +13,28 @@ before_script:
  - sudo apt-get install libmysqlclient-dev  
  - gem install rspec rspec-rails simplecov codeclimate-test-reporter
  - bundle install
+ - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+ - chmod +x ./cc-test-reporter
+ - ./cc-test-reporter before-build
 
 script:
   - mysql -uroot -e 'CREATE DATABASE IF NOT EXISTS `observatorio-producaoTest` CHARACTER SET utf8 COLLATE utf8_general_ci'
   - mysql observatorio-producaoTest < db/observatorio_producao.sql -uroot
-  - bundle exec rake db:migrate RAILS_ENV=test
+  - bundle exec rake db:migrate
+  - bundle exec rake db:schema:load
   - bundle exec rspec spec
 
 after_success:
-  - CODECLIMATE_REPO_TOKEN=2295d3595bea327ad6b16da50000e97765864033786a392b568eadfceea62476 bundle exec rake 
+  - CODECLIMATE_REPO_TOKEN=ed2c65558c610884e54266457bbe87c43185b822d58587645795050091e4dd8c bundle exec rake 
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 notifications:
   email:
     recipients:
-      - antoniojk7@gmail.com
-      - leomeister22@gmail.com
-      - lucas.advc@gmail.com
-      - skingk.f@gmail.com
-      - vitor.nere@hotmail.com
+      - lhqmalta@gmail.com
+      - andrade.icaa@gmail.com
+      - gabrielaalvesdagama@gmail.com
+      - mare.s.mendes@gmail.com
+      - annalarissa.mmm@gmail.com
+      - halevalente@gmail.com
 
